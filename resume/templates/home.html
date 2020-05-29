@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block content %}
+	
+	    <nav>
+	      <a href="#">HOME</a>
+	      <a href="#">PORTFOLIO</a>
+	      <a href="{% url 'my_resume_url' %}">ABOUT ME</a>
+	      <a href="#">LINK</a>
+	      <div class="line"></div>
+	    </nav>
+	
+{% endblock %}

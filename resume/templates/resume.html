@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Resume
+{% endblock %}
+
+{% block content %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/resume.css' %}">
+
+	<br>{# br - делает отступ #}
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-3">
+				<div class="card card-body" id="profile-wrapper">
+					<img id="profile-pic" src="{% static 'image/jcole.jpeg' %}">
+					<hr>
+					<h4>Hi I'm Baha!</h4>
+					<p>I love coding, doing research and collaborating</p>
+				</div>
+			</div> 
+
+			<div class="col-md-9">
+				<div class="card card-body">
+					<h4>About me</h4>
+					<hr>
+					<p>Интерес и огромное желание переквалифицироваться в Backend разработчика, так как считаю Web программирование своим любимым делом.</p>
+					<p>Опыт самостоятельных разработок схем и печатных плат, написания управляющих программ для микроконтроллеров Atmel, на языке Assembler.</p>
+					<ul class="social-links">
+						<li><img class="social" src="{% static 'icons/linkedin.svg' %}"></li>
+						<li><img class="social" src="{% static 'icons/instagram.svg' %}"></li>
+						<li><img class="social" src="{% static 'icons/telegram.svg' %}"></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+
+			<div class="col-md-6">
+				<div class="card card-body">
+					<h5>My Experience as a Developer</h5>
+					<hr>
+					<p></p>
+					<p></p>	
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body">
+					<h5>What I know</h5>
+					<hr>
+					<p>
+						{% for skill in skills %}
+							<span class="badge badge-pill badge-info">{{ skill.title }}</span>
+						{% endfor %}
+					</p>		
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+
+			<div class="col-md-3">
+				<div class="card card-body">
+					<h5>How I learn</h5>
+					<hr>
+					<p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>	
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="card card-body">
+					<h5>My short term goals</h5>
+					<hr>
+					<p></p>		
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+{% endblock %}

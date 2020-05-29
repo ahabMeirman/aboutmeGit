@@ -1,0 +1,68 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #48478A;
+}
+
+/* Center nav */
+nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+a {
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+	padding: 1em 0;
+	display: inline-block;
+	font-weight: bold; /* жирный текст*/
+	transition: all .4s ease-in-out;/* замедляет анимацию на 4 секунды*/
+}
+
+/* это анимация прокрутки */
+.line {
+	width: 120px;/* ширина*/
+	height: 3px; /* высота*/
+	background-color: #FFF;
+	transition: all .4s ease-in-out;/* замедляет анимацию на 4 секунды*/
+}
+
+/* благодоря методу ~ .line , hover работает вместе с прокруткой*/
+a:nth-child(2):hover ~ .line {
+	transform: translate(125px); /* перетаскиваем наши линию на 120пикселей*/
+	transition: all .4s ease-in-out;/* замедляет анимацию на 4 секунды*/
+	background-color: tomato;
+}
+/* hover на буквы */
+a:nth-child(2):hover {
+	color: tomato;
+}
+
+a:nth-child(3):hover ~ .line {
+	transform: translate(250px); /* перетаскиваем наши линию на 260пикселей*/
+	transition: all .4s ease-in-out;/* замедляет анимацию на 4 секунды*/
+	background-color: yellow;
+}
+/* hover на буквы */
+a:nth-child(3):hover {
+	color: yellow;
+}
+
+a:nth-child(4):hover ~ .line {
+	transform: translate(375px); /* перетаскиваем наши линию на 375пикселей*/
+	transition: all .4s ease-in-out;/* замедляет анимацию на 4 секунды*/
+	background-color: skyblue;
+}
+/* hover на буквы */
+a:nth-child(4):hover {
+	color: skyblue;
+}
