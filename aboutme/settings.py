@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resume.apps.ResumeConfig', # здесь мое резюме, краткое описания моих достижений
+    'myblog.apps.MyblogConfig', # Это мой блог, статьи лайки и комменты
 ]
 
 MIDDLEWARE = [

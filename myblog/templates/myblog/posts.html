@@ -1,0 +1,34 @@
+{% extends 'myblog/index.html' %}
+{% load static %}
+
+{% block title %}
+	Blog
+{% endblock %}
+
+{% block content %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog_list.css' %}">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+
+				{% for blog in blogs %}
+					<div class="card text-center mb-3">
+					  	<div class="card-header"><h5>{{ blog.title }}</h5></div>
+					  	<div class="card-body">
+					    	<h5 class="card-title"></h5>
+					    	<p class="card-text">{{ blog.text }}</p>
+					    	<a href="{% url 'post_detail_url' title=blog.title %}" class="btn btn-light">Read</a> {# поэтому использ get_absolute_url чтобы сократить эту запись #}
+					  	</div>
+					  	<div class="card-footer text-muted">
+					    	{{ blog.date}}
+					  	</div>
+					</div>
+				{% endfor %}
+
+			</div>	
+			<div class="col-md-3">
+			</div>
+		</div>
+	</div>
+{% endblock %}

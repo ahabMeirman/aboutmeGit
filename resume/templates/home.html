@@ -6,13 +6,13 @@
 {% endblock %}
 
 {% block content %}
-	
+	<div class="container">
 	    <nav>
-	      <a href="#">HOME</a>
+	      <a href="{% url 'post_url' %}">MY BLOG</a>
 	      <a href="#">PORTFOLIO</a>
 	      <a href="{% url 'my_resume_url' %}">ABOUT ME</a>
 	      <a href="#">LINK</a>
 	      <div class="line"></div>
 	    </nav>
-	
+	</div>
 {% endblock %}
