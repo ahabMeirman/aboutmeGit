@@ -17,7 +17,7 @@
 					  	<div class="card-header"><h5>{{ blog.title }}</h5></div>
 					  	<div class="card-body">
 					    	<h5 class="card-title"></h5>
-					    	<p class="card-text">{{ blog.text }}</p>
+					    	<p class="card-text">{{ blog.text|truncatewords:50|safe }}</p> {# фильтр safe убирает html теги, здесь мы используем плагин SKEditor #}
 					    	<a href="{% url 'post_detail_url' title=blog.title %}" class="btn btn-light">Read</a> {# поэтому использ get_absolute_url чтобы сократить эту запись #}
 					  	</div>
 					  	<div class="card-footer text-muted">
