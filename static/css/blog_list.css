@@ -1,3 +1,15 @@
 body {
 	background-color: #8DC35E;
 }
+
+pre {
+	/* Толщина рамки в пикселах,тип границы (в данном случае сплошная линия) ицвет линии */
+	border-width: 1;
+	border-color: #90DB0D;
+	border-style: solid;
+	padding: 5px; /* Расстояние от текста до рамки */
+	background-color: #90DB0D;
+	border-radius: 10px;
+}
+
+c
