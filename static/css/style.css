@@ -66,3 +66,10 @@ a:nth-child(4):hover ~ .line {
 a:nth-child(4):hover {
 	color: skyblue;
 }
+/*это должно дыло быть адоптивность пири каком разрешении меняется текст*/
+/*
+@media (max-width: 350px) {
+	.home_list {
+		font-size: 1.5em;
+	}
+}*/
