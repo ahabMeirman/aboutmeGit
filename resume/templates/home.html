@@ -6,13 +6,15 @@
 {% endblock %}
 
 {% block content %}
-	<div class="container">
-	    <nav>
-	      <a href="{% url 'post_url' %}">MY BLOG</a>
-	      <a href="#">PORTFOLIO</a>
-	      <a href="{% url 'my_resume_url' %}">ABOUT ME</a>
-	      <a href="#">LINK</a>
-	      <div class="line"></div>
+	<div class="container-fluid">
+	    <nav class="home_list text-center">
+	    	<div class="col-12 text-center">
+		      <a href="{% url 'post_url' %}">MY BLOG</a>
+		      <a href="#">PORTFOLIO</a>
+		      <a href="{% url 'my_resume_url' %}">ABOUT ME</a>
+		      <a href="#">LINK</a>
+		      <div class="line"></div>
+			</div>
 	    </nav>
 	</div>
 {% endblock %}
