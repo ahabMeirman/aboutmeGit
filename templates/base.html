@@ -12,12 +12,19 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!-- icon in awesome -->
     <script src="https://kit.fontawesome.com/40ae737fd2.js" crossorigin="anonymous"></script>
-    
+
     {# Normalize. css — это небольшой CSS-файл, который обеспечивает для HTML-элементов лучшую кроссбраузерность в стилях по умолчанию. #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 
-    {% block coogle_analitics %}
-    {% endblock %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168908138-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-168908138-1');
+	</script>
 
     <title>
       {% block title %}
@@ -34,8 +41,8 @@
 
     {% block content %}
     {% endblock %}
-    
-    
+
+
     {% block footer %}
     {% endblock %}
 
